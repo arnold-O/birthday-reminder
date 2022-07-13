@@ -4,8 +4,8 @@ export default function Profile({ dataset, setData }) {
   return (
     <div className="profileContainer">
       {dataset.map((item) => {
-        const {img, name, age} = item
-       return <div className="each-Container">
+        const {img, name, id, age} = item
+       return <div key={id} className="each-Container">
           <div className="imgContainer">
             <img src={img} alt="pix" />
           </div>
